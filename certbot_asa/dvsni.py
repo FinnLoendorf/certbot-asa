@@ -11,13 +11,13 @@ from certbot_asa import pki
 
 logger = logging.getLogger(__name__)
 
-class AsaDvsni(common.TLSSNI01):
+class AsaDvsni(common.HTTP01):
     """Class performs DVSNI challenges within the Asa configurator.
 
     :ivar configurator: AsaAuthenticator object
     :type configurator: :class:`~configurator.AsaAuthenticator`
 
-    :ivar list achalls: Annotated tls-sni-01
+    :ivar list achalls: Annotated http-01
         (`.KeyAuthorizationAnnotatedChallenge`) challenges.
 
     :param list indices: Meant to hold indices of challenges in a

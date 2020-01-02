@@ -168,7 +168,7 @@ class AsaConfigurator(common.Plugin):
         :rtype: list
 
         """
-        return [challenges.TLSSNI01]
+        return [challenges.HTTP01]
 
     def perform(self, achalls):
         """Perform the given challenge.

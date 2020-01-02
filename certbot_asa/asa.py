@@ -8,7 +8,7 @@ import logging
 requests.packages.urllib3.disable_warnings()
 logging.getLogger("requests").setLevel(logging.WARNING)
 
-class RestAsa(common.TLSSNI01):
+class RestAsa(common.HTTP01):
     """Class talks to ASA via REST API"""
 
     def __init__(self, host, user, passwd, noverify, castore):
